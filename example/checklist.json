@@ -1,0 +1,30 @@
+{
+  "updated": "2026-10-11T12:00",
+  "by": "Claude",
+  "rules": [
+    "Optional: rules for whoever edits this file (people or AI assistants). The panel does not show them."
+  ],
+  "sections": [
+    {
+      "id": "A",
+      "title": "First section",
+      "tasks": [
+        {
+          "id": "A1",
+          "title": "Something that waits for you",
+          "status": "wait",
+          "note": "One line shown in the list",
+          "details": "Longer text, shown after a click on the task",
+          "changed": "2026-10-11",
+          "by": "Claude"
+        },
+        { "id": "A2", "title": "In progress", "status": "now", "note": "Being done right now" },
+        { "id": "A3", "title": "Next in line", "status": "next" },
+        { "id": "A4", "title": "Not started", "status": "todo" },
+        { "id": "A5", "title": "Some day", "status": "later" },
+        { "id": "A6", "title": "Finished", "status": "done", "note": "Result and proof", "changed": "2026-10-11" },
+        { "id": "A7", "title": "Dropped", "status": "cancelled" }
+      ]
+    }
+  ]
+}

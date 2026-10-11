@@ -1,0 +1,33 @@
+{
+  "name": "vscode-task-board",
+  "displayName": "Task Board (checklist.json)",
+  "description": "Sidebar task board for a project: reads checklist.json from the open folder and redraws itself on save. Interface in Russian.",
+  "version": "0.1.2",
+  "publisher": "kuziapkgpt1-hash",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/kuziapkgpt1-hash/vscode-task-board.git" },
+  "engines": { "vscode": "^1.80.0" },
+  "main": "./extension.js",
+  "activationEvents": ["onStartupFinished"],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        { "id": "taskBoard", "title": "Задачи", "icon": "media/icon.svg" }
+      ]
+    },
+    "views": {
+      "taskBoard": [
+        { "type": "webview", "id": "taskBoard.view", "name": "Задачи" }
+      ]
+    },
+    "commands": [
+      { "command": "taskBoard.refresh", "title": "Задачи: обновить", "icon": "$(refresh)" },
+      { "command": "taskBoard.show", "title": "Задачи: показать панель" }
+    ],
+    "menus": {
+      "view/title": [
+        { "command": "taskBoard.refresh", "when": "view == taskBoard.view", "group": "navigation" }
+      ]
+    }
+  }
+}
